@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 20:59:13 by cmakario          #+#    #+#             */
-/*   Updated: 2023/10/18 22:06:51 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/10/24 23:07:16 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,4 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (a);
 }
+//hope it works
