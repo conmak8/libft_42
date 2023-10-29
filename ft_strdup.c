@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 17:43:03 by cmakario          #+#    #+#             */
-/*   Updated: 2023/10/29 21:30:33 by cmakario         ###   ########.fr       */
+/*   Created: 2023/10/28 00:35:48 by cmakario          #+#    #+#             */
+/*   Updated: 2023/10/28 01:22:36 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	int	i ;
+	int		i;
+	int		len;
+	char	*p;
 
-	i = ft_strlen(s);
-	while (s[i] != (char)c && i > 0)
-		i--;
-	if (s[i] == (char)c)
-		return ((char *)(s + i));
-	return (NULL);
+	len = ft_strlen(s1);
+	p = malloc((len + 1) * sizeof(char));
+	i = 0;
+	if (!p)
+		return (0);
+	else
+	{
+		while (i < len)
+		{
+			p[i] = s1[i];
+			i++;
+		}
+		p[i] = '\0';
+		return (p);
+	}
 }
-// #include <string.h>
-// #include <stdio.h>
-
-// int main (void)
-// {
-// 	printf ("%s\n", ft_strchr("teste", 1024));
-// 	printf ("%s\n", strchr("teste", 1024));
-// }
-
-// Giati sketo (char) hwris asteraki?????

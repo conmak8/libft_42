@@ -6,7 +6,7 @@
 #    By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 22:12:47 by cmakario          #+#    #+#              #
-#    Updated: 2023/10/19 05:58:46 by cmakario         ###   ########.fr        #
+#    Updated: 2023/10/29 20:05:36 by cmakario         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 FUNCTIONS = ft_atoi.c \
 			ft_bzero.c \
+			ft_calloc.c \
 			ft_isalnum.c \
 			ft_isalpha.c \
 			ft_isascii.c \
@@ -30,13 +31,18 @@ FUNCTIONS = ft_atoi.c \
 			ft_memmove.c \
 			ft_strchr.c \
 			ft_strlcat.c \
+			ft_strdup.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
 			ft_strncmp.c \
 			ft_strnstr.c \
 			ft_strrchr.c \
 			ft_tolower.c \
-			ft_toupper.c 
+			ft_toupper.c  \
+			ft_substr.c	\
+			ft_strjoin.c \
+			ft_strtrim.c 
+			
 
 OBJ_FILES = $(FUNCTIONS:%.c=%.o)
 

@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:52:11 by cmakario          #+#    #+#             */
-/*   Updated: 2023/10/20 15:16:22 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/10/27 00:40:45 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,25 +39,25 @@ int	ft_atoi(const char *str)
 	return (0);
 }
 
-// void check_leaks( void )
-// {
-// 	system("leaks a.out");
-// }
+/* void check_leaks( void )
+{
+	system("leaks a.out");
+}
 
 // "        -45"
-// int main(void)
-// {
-// 	int aa;
-// 	int bb;
+int main(void)
+{
+	int aa;
+	int bb;
 	
-// 	atexit(check_leaks);
-// 	char a[]="2334";
-// 	aa = ft_atoi(a);
-// 	bb = atoi(a);
+	atexit(check_leaks);
+	char a[]="2334";
+	aa = ft_atoi(a);
+	bb = atoi(a);
 	
-// 	printf("aa= %d\n original= %d\n",aa,bb);
+	printf("aa= %d\n original= %d\n",aa,bb);
 
-// 	return (0);
+	return (0);
 	
 	
-// }
+}*/
