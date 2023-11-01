@@ -6,64 +6,21 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 20:04:24 by cmakario          #+#    #+#             */
-/*   Updated: 2023/10/30 13:51:47 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/01 14:18:19 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // /**
-//  * @brief Allocates with malloc and returns a copy of ’s1’ with the characters 
-//  * specified in ’set’ removed from the beginning and the end of the string
-//  * 
+//  * @brief Allocates with malloc and returns a copy of ’s1’ with the 
+//  * characters  specified in ’set’ removed from the beginning and the end 
+//  * of the string
 //  * @param s1 The string to be trimmed.
 //  * @param set The reference set of characters to trim.
 //  * @return 	The trimmed string.
 // 			NULL if the allocation fails.
 //  */
-
-// int findlength(char *s)
-// {
-// int i;
-// int j;
-
-// }
-
-
-
-
-// char	*ft_strtrim(char const *s1, char const *set)
-// {
-// 	int		lens1;
-// 	int		lenset;
-// 	int		counter;
-// 	char	*cp;
-// 	int		i;
-// 	int		j;
-
-// 	i = 0;
-// 	counter = 0;
-// 	lens1 = ft_strlen(s1);
-// 	lenset = ft_strlen(set);
-// 	if (!s1 || !set)
-// 		return (0);
-// 	while (i < lens1)
-// 	{
-// 		j = 0;
-// 		while (j < lenset)
-// 		{
-// 			if (s1[i] == set[j])
-// 				counter += 1;
-// 				if (set[j] != )
-// 			j++;
-// 		}
-// 		i++;
-// 	}
-// }
-
-
-
-
 int	check_rem_char(char const *set, char c)
 {
 	int	i;
@@ -96,13 +53,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ft_substr(s1, i, j - i + 1));
 }
 
-
-
 // --------------------------------------------------------------------
-
-
 // Ti ehei grapsei i tipissa!!!!
-
 // char	*ft_strtrim(char const *s1, char const *set)
 // {
 // 	size_t	i;
@@ -116,4 +68,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 // 		i--;
 // 	return (ft_substr(s1, 0, i + 1));
 // }
-

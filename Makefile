@@ -6,7 +6,7 @@
 #    By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 22:12:47 by cmakario          #+#    #+#              #
-#    Updated: 2023/10/30 15:30:51 by cmakario         ###   ########.fr        #
+#    Updated: 2023/11/01 19:18:24 by cmakario         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,8 +42,14 @@ FUNCTIONS = ft_atoi.c \
 			ft_substr.c	\
 			ft_strjoin.c \
 			ft_strtrim.c \
-			ft_split.c
+			ft_split.c \
+			ft_itoa.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putendl_fd.c 
+			# ft_putnbr_fd.c \
 			
+
 
 OBJ_FILES = $(FUNCTIONS:%.c=%.o)
 

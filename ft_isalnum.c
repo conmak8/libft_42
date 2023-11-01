@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 19:12:47 by cmakario          #+#    #+#             */
-/*   Updated: 2023/10/13 00:02:04 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/01 10:18:23 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 // 	return (0);
 // }
 
+// The isalnum() function tests for any character for which isalpha(3) or 
+// isdigit(3) is true.
 int	ft_isalnum(int a)
 {
 	if (((a >= 65 && a <= 90) || (a >= 97 && a <= 122)) || (a > 47 && a < 58))

@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 17:50:12 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/01 10:14:05 by cmakario         ###   ########.fr       */
+/*   Created: 2023/11/01 15:47:52 by cmakario          #+#    #+#             */
+/*   Updated: 2023/11/01 15:54:11 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The isalpha() function tests for any character for which isupper(3) or 
-// islower(3) is true.
-int	ft_isalpha(int a)
+#include "libft.h"
+
+// Outputs the string ’s’ to the given file descriptor.
+void	ft_putstr_fd(char *s, int fd)
 {
-	if ((a >= 65 && a <= 90) || (a >= 97 && a <= 122))
-		return (1);
-	return (0);
+	write(fd, s, ft_strlen(s));
 }
