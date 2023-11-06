@@ -1,42 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 16:26:57 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/02 18:09:25 by cmakario         ###   ########.fr       */
+/*   Created: 2023/11/06 17:56:09 by cmakario          #+#    #+#             */
+/*   Updated: 2023/11/06 18:21:41 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+// Deletes and frees the given node and every
+// successor of that node, using the function ’del’
+// and free(3).
+// Finally, the pointer to the list must be set to
+// NULL.
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char	num_to_str[12];
-	int		digit_n ;
-	int		i ;
+	t_list	*ptr;
+	t_list	*delete_ptr;
 
-	if (n == -2147483648)
-		write(fd, "-2147483648", 11);
-	else
-	{
-		if (n < 0)
-		{
-			write(fd, "-", 1);
-			n = n * (-1);
-		}
-		i = 0 ;
-		while ((n / 10) != 0 && n != -2147483648)
-		{
-			digit_n = n % 10 ;
-			num_to_str[i++] = digit_n + '0';
-			n = n / 10 ;
-		}
-		num_to_str[i] = n + '0';
-		while (i >= 0)
-			write(fd, &num_to_str[i--], 1);
+	if (*lst == NULL || lst == NULL )
 		return ;
+	ptr = *lst;
+	while (ptr)
+	{
+		delete_ptr = ptr;
+		ptr = ptr->next;
+		ft_lstdelone(delete_ptr, del);
 	}
+	*lst = NULL;
 }

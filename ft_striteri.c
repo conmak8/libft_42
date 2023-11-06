@@ -1,42 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 16:26:57 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/02 18:09:25 by cmakario         ###   ########.fr       */
+/*   Created: 2023/11/02 18:14:52 by cmakario          #+#    #+#             */
+/*   Updated: 2023/11/02 18:34:58 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	num_to_str[12];
-	int		digit_n ;
-	int		i ;
+	unsigned int	len;
+	unsigned int	i;
 
-	if (n == -2147483648)
-		write(fd, "-2147483648", 11);
-	else
-	{
-		if (n < 0)
-		{
-			write(fd, "-", 1);
-			n = n * (-1);
-		}
-		i = 0 ;
-		while ((n / 10) != 0 && n != -2147483648)
-		{
-			digit_n = n % 10 ;
-			num_to_str[i++] = digit_n + '0';
-			n = n / 10 ;
-		}
-		num_to_str[i] = n + '0';
-		while (i >= 0)
-			write(fd, &num_to_str[i--], 1);
+	len = 0;
+	i = 0;
+	if (s == NULL || f == NULL)
 		return ;
+	len = ft_strlen(s);
+	while (i < len)
+	{
+		f(i, &s[i]);
+		i++;
 	}
+	s[i] = '\0';
 }

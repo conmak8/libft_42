@@ -6,7 +6,7 @@
 #    By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 22:12:47 by cmakario          #+#    #+#              #
-#    Updated: 2023/11/01 19:18:24 by cmakario         ###   ########.fr        #
+#    Updated: 2023/11/06 18:37:19 by cmakario         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,14 +44,26 @@ FUNCTIONS = ft_atoi.c \
 			ft_strtrim.c \
 			ft_split.c \
 			ft_itoa.c \
+			ft_strmapi.c \
+			ft_striteri.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
-			ft_putendl_fd.c 
-			# ft_putnbr_fd.c \
-			
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c \
+			ft_lstlast.c \
 
+BONUS_FUNCTIONS =	ft_lstnew.c \
+					ft_lstadd_front.c \
+					ft_lstsize.c \
+					ft_lstadd_back.c \
+					ft_lstdelone.c \
+					ft_lstclear.c \
+					ft_lstiter.c \
+					ft_lstmap.c 
+					
 
 OBJ_FILES = $(FUNCTIONS:%.c=%.o)
+OBJ_BONUS_FILES = $(BONUS_FUNCTIONS:%.c=%.o)
 
 $(NAME) : $(OBJ_FILES)
 	ar rcs $(NAME) $(OBJ_FILES)
@@ -61,6 +73,10 @@ $(OBJ_FILES) : $(FUNCTIONS)
 
 all: $(NAME)
 
+bonus:
+	gcc -c -Wall -Wextra -Werror $(BONUS_FUNCTIONS)
+	ar rcs $(NAME) $(OBJ_BONUS_FILES)
+	
 clean: 
 	rm -f $(OBJ_FILES)
 

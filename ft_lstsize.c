@@ -1,42 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 16:26:57 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/02 18:09:25 by cmakario         ###   ########.fr       */
+/*   Created: 2023/11/06 15:23:38 by cmakario          #+#    #+#             */
+/*   Updated: 2023/11/06 15:58:14 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+// Counts the number of nodes in a list
+int	ft_lstsize(t_list *lst)
 {
-	char	num_to_str[12];
-	int		digit_n ;
-	int		i ;
+	int		count;
+	t_list	*ptr;
 
-	if (n == -2147483648)
-		write(fd, "-2147483648", 11);
-	else
+	ptr = NULL;
+	count = 0;
+	if (lst == 0)
+		return (0);
+	ptr = lst;
+	while (ptr != NULL)
 	{
-		if (n < 0)
-		{
-			write(fd, "-", 1);
-			n = n * (-1);
-		}
-		i = 0 ;
-		while ((n / 10) != 0 && n != -2147483648)
-		{
-			digit_n = n % 10 ;
-			num_to_str[i++] = digit_n + '0';
-			n = n / 10 ;
-		}
-		num_to_str[i] = n + '0';
-		while (i >= 0)
-			write(fd, &num_to_str[i--], 1);
-		return ;
+		count++;
+		ptr = ptr->next;
 	}
+	return (count);
 }
+
+/* int	ft_lstsize(t_list *lst)
+{
+	int		i;
+	t_list	*current;
+
+	i = 0;
+	current = lst;
+	if (!lst)
+		return (0);
+	while (current)
+	{
+		current = current->next;
+		i++;
+	}
+	return (i);
+} */

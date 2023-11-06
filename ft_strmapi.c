@@ -1,42 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 16:26:57 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/02 18:09:25 by cmakario         ###   ########.fr       */
+/*   Created: 2023/11/02 17:34:18 by cmakario          #+#    #+#             */
+/*   Updated: 2023/11/02 18:00:44 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	num_to_str[12];
-	int		digit_n ;
-	int		i ;
+	int		len;
+	char	*array_ns;
+	int		i;
 
-	if (n == -2147483648)
-		write(fd, "-2147483648", 11);
-	else
+	if (s == NULL || f == NULL)
+		return (0);
+	len = 0;
+	i = 0;
+	len = ft_strlen(s);
+	array_ns = ft_calloc(len + 1, sizeof(char));
+	if (!array_ns)
+		return (NULL);
+	while (i < len)
 	{
-		if (n < 0)
-		{
-			write(fd, "-", 1);
-			n = n * (-1);
-		}
-		i = 0 ;
-		while ((n / 10) != 0 && n != -2147483648)
-		{
-			digit_n = n % 10 ;
-			num_to_str[i++] = digit_n + '0';
-			n = n / 10 ;
-		}
-		num_to_str[i] = n + '0';
-		while (i >= 0)
-			write(fd, &num_to_str[i--], 1);
-		return ;
+		array_ns[i] = f(i, s[i]);
+		i++;
 	}
+	array_ns[i] = '\0';
+	return (array_ns);
 }

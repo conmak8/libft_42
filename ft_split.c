@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:30:16 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/01 15:20:43 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/02 19:32:50 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,10 @@ static int	ft_letter_count(char *s, char c)
 
 static void	free_ar_split(char **ar_split, int i)
 {
-	while (--i > 0)
+	while (i >= 0)
 	{
 		free(ar_split[i]);
+		i--;
 	}
 	free(ar_split);
 }

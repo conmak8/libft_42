@@ -6,20 +6,18 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:02:55 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/01 21:08:48 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/02 18:34:48 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
-
+// #include "stdio.h"
 
 static int	find_n_of_digits(int n)
 {
 	int	counter;
 
 	counter = 0;
-	
 	if (n < 0)
 	{
 		n = -n;
@@ -81,4 +79,3 @@ char	*ft_itoa(int n)
 // 	printf("%s",ft_itoa(a));
 // 	return (0);
 // }
-	
