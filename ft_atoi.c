@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:52:11 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/07 13:50:22 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:32:34 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (result * sign);
-	return (0);
 }
 
+// ----------------------CHECK LEAKS TRICK-----------------------------------
 /* void check_leaks( void )
 {
 	system("leaks a.out");

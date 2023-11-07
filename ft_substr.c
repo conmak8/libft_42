@@ -6,13 +6,13 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 16:06:43 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/02 19:35:39 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 19:10:00 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Allocates (with malloc(3)) and returns a substring from the string ’s’.
+// Allocates (with malloc) and returns a substring from the string ’s’.
 // The substring begins at index ’start’ and is of maximum size ’len’.
 // s: The string from which to create the substring. start: The start index of
 // the substring in the string ’s’.

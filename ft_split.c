@@ -6,33 +6,20 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:30:16 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/02 19:32:50 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 20:49:49 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int	ft_word_count(char const *s, char c)
+static void	free_ar_split(char **ar_split, int i)
 {
-	unsigned int	w_count;
-	unsigned int	i;
-
-	i = 0;
-	w_count = 0;
-	if (!s[i])
-		return (0);
-	while (s[i])
+	while (i >= 0)
 	{
-		if (s[i] != c)
-		{
-			w_count += 1;
-			while (s[i] != c && s[i])
-				i++;
-		}
-		else
-			i++;
+		free(ar_split[i]);
+		i--;
 	}
-	return (w_count);
+	free(ar_split);
 }
 
 static int	ft_letter_count(char *s, char c)
@@ -43,16 +30,6 @@ static int	ft_letter_count(char *s, char c)
 	while (s[nletters] && s[nletters] != c)
 		nletters++;
 	return (nletters);
-}
-
-static void	free_ar_split(char **ar_split, int i)
-{
-	while (i >= 0)
-	{
-		free(ar_split[i]);
-		i--;
-	}
-	free(ar_split);
 }
 
 static char	**ft_substring(char const *s, char c, char **ar_split,
@@ -84,7 +61,30 @@ static char	**ft_substring(char const *s, char c, char **ar_split,
 	return (ar_split);
 }
 
-// Allocates (with malloc(3)) and returns an array of strings obtained by spli-
+static unsigned int	ft_word_count(char const *s, char c)
+{
+	unsigned int	w_count;
+	unsigned int	i;
+
+	i = 0;
+	w_count = 0;
+	if (!s[i])
+		return (0);
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			w_count += 1;
+			while (s[i] != c && s[i])
+				i++;
+		}
+		else
+			i++;
+	}
+	return (w_count);
+}
+
+// Allocates (with malloc) and returns an array of strings obtained by spli-
 // tting ’s’ using the character ’c’ as a delimiter. The array must end with a 
 // NULL pointer.      	s: The string to be split.
 //						c: The delimiter character.

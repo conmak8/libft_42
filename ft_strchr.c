@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:43:03 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/07 12:07:59 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 19:04:36 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (0);
 }
+
 // #include <string.h>
 // #include <stdio.h>
 

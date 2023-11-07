@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 20:04:24 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/01 14:18:19 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 20:42:47 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	j = ft_strlen(s1) - 1;
-	if (*s1 == 0)
+	if (s1 == 0)
 		return (ft_strdup(s1));
-	if (*set == 0)
+	if (set == 0)
 		return (ft_strdup(s1));
 	while (s1[i] != '\0' && check_rem_char(set, s1[i]) == 1)
 		i++;

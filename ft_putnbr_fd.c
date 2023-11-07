@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:26:57 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/07 11:51:32 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 19:20:29 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_putnbr_fd(int n, int fd)
 			n = n * (-1);
 		}
 		i = 0 ;
-		while ((n / 10) != 0 && n != -2147483648)
+		while ((n / 10) != 0)
 		{
 			digit_n = n % 10 ;
 			num_to_str[i++] = digit_n + '0';

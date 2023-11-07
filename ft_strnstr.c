@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:44:22 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/07 12:04:50 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 19:05:40 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,38 +14,9 @@
 #include <stdio.h>
 #include <string.h>
 
-/* char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
-{
-	size_t	lnee;
-	size_t	lhay;
-	size_t	i;
-	size_t	j;
-
-	lnee = ft_strlen(needle);
-	lhay = ft_strlen(haystack);
-	i = 0;
-	if (lnee == 0)
-		return ((char *)(haystack));
-	while (i < len && i < lhay)
-	{
-		j = 0;
-		while (i + j < len && needle[j])
-		{
-			if (haystack[i + j] == needle[j])
-				j++;
-		}
-		if (j == lnee)
-			return ((char *)(haystack + i));
-		i++;
-	}
-	return (NULL);
-} */
-
 // The strnstr() function locates the first occurrence of the null-terminated 
 // string needle in the string haystack, where not more than len characters 
 // are searched.Characters that appear after a `\0' character are not searched. 
-//  Since the strnstr() function is a FreeBSD specific API, it should only 
-// be used when portability is not a concern.
 // RETURN VALUES
 // If needle is an empty string, haystack is returned; if needle occurs nowhere
 // in haystack, NULL is returned; otherwise a pointer to the first character of 
@@ -75,6 +46,32 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
+/* char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	size_t	lnee;
+	size_t	lhay;
+	size_t	i;
+	size_t	j;
+
+	lnee = ft_strlen(needle);
+	lhay = ft_strlen(haystack);
+	i = 0;
+	if (lnee == 0)
+		return ((char *)(haystack));
+	while (i < len && i < lhay)
+	{
+		j = 0;
+		while (i + j < len && needle[j])
+		{
+			if (haystack[i + j] == needle[j])
+				j++;
+		}
+		if (j == lnee)
+			return ((char *)(haystack + i));
+		i++;
+	}
+	return (NULL);
+} */
 /* 
 int main(void)
 {

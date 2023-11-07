@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:56:09 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/06 18:21:41 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:15:28 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*ptr;
 	t_list	*delete_ptr;
 
-	if (*lst == NULL || lst == NULL )
+	if (lst == NULL || *lst == NULL )
 		return ;
 	ptr = *lst;
 	while (ptr)
