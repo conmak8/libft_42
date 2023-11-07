@@ -6,12 +6,15 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 18:14:52 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/02 18:34:58 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 11:54:37 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Applies the function ’f’ on each character of the string passed as argument,
+// passing its index as first argument. Each character is passed by address to
+// ’f’ to be modified if necessary.
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	len;

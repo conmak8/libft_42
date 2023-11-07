@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 18:02:55 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/02 18:34:48 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 13:30:59 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static char	*smallest_n(void)
 	return (smallest_n);
 }
 
-// Allocates (with malloc(3)) and returns a string representing the integer 
+// Allocates (with malloc) and returns a string representing the integer 
 // received as an argument. Negative numbers must be handled.
 // The string representing the integer. NULL if the allocation fails.
 char	*ft_itoa(int n)
