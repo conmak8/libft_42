@@ -6,13 +6,11 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 16:44:22 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/07 19:05:40 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 21:06:06 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 // The strnstr() function locates the first occurrence of the null-terminated 
 // string needle in the string haystack, where not more than len characters 

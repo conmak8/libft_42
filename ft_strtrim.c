@@ -6,7 +6,7 @@
 /*   By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/29 20:04:24 by cmakario          #+#    #+#             */
-/*   Updated: 2023/11/07 20:42:47 by cmakario         ###   ########.fr       */
+/*   Updated: 2023/11/07 21:06:59 by cmakario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 //  * @return 	The trimmed string.
 // 			NULL if the allocation fails.
 //  */
-int	check_rem_char(char const *set, char c)
+static int	check_rem_char(char const *set, char c)
 {
 	int	i;
 

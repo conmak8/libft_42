@@ -6,7 +6,7 @@
 #    By: cmakario <cmakario@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/12 22:12:47 by cmakario          #+#    #+#              #
-#    Updated: 2023/11/06 18:37:19 by cmakario         ###   ########.fr        #
+#    Updated: 2023/11/08 14:14:15 by cmakario         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,7 +78,7 @@ bonus:
 	ar rcs $(NAME) $(OBJ_BONUS_FILES)
 	
 clean: 
-	rm -f $(OBJ_FILES)
+	rm -f $(OBJ_FILES) $(OBJ_BONUS_FILES)
 
 fclean: clean
 	rm -f $(NAME)
